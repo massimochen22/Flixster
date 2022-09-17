@@ -27,7 +27,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### App Walkthough GIF
 `
 
-<img src="walkthrough" width=250><br>
+<img src="walkthrough.gif" width=250><br>
 
 ### Notes
 I tried to tackle down the stretch story regarding the landscape view (getting the poster to back_drop path), but I wasn't able to solve the issues. I first tried from Movie.kt, and simply change the path to the back_drop path using if else logic when the device orientation is in landscape, but I noticed it didn't work.
