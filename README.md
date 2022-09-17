@@ -31,7 +31,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 ### Notes
 I tried to tackle down the stretch story regarding the landscape view (getting the poster to back_drop path), but I wasn't able to solve the issues. I first tried from Movie.kt, and simply change the path to the back_drop path using if else logic when the device orientation is in landscape, but I noticed it didn't work.
 I wanted to make sure the orientation was set to the correct value, so I printed out the value, but as you can see from the picture it says the value is 0, which means it is undefined.
-<img src="screenshot"><br>
+<img src="screenshot.png"><br>
 
 ### Open-source libraries used
 
