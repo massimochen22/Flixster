@@ -13,9 +13,9 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] (10pts) User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
 
 #### BONUS
-- [ ] (2pts) Views should be responsive for both landscape/portrait mode.
+- [x] (2pts) Views should be responsive for both landscape/portrait mode.
    - [x] (1pt) In portrait mode, the poster image, title, and movie overview is shown.
-   - [ ] (1pt) In landscape mode, the rotated alternate layout should use the backdrop image instead and show the title and movie overview to the right of it.
+   - [x] (1pt) In landscape mode, the rotated alternate layout should use the backdrop image instead and show the title and movie overview to the right of it.
 
 - [x] (2pts) Display a nice default [placeholder graphic](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#advanced-usage) for each image during loading
 - [x] (2pts) Improved the user interface by experimenting with styling and coloring.
@@ -28,10 +28,16 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 <img src="walkthrough.gif" width=250><br>
 
+edit: Updated gif:
+<img src="walkthrough2.gif" width=250><br>
+
 ### Notes
+
 I tried to tackle down the stretch story regarding the landscape view (getting the poster to back_drop path), but I wasn't able to solve the issues. I first tried from Movie.kt, and simply change the path to the back_drop path using if else logic when the device orientation is in landscape, but I noticed it didn't work.
 I wanted to make sure the orientation was set to the correct value, so I printed out the value, but as you can see from the picture it says the value is 0, which means it is undefined.
 <img src="screenshot.png"><br>
+
+edit: I was able to solve this issue. My code was wrong for this part (the part I showed in the screenshot). By calling Configuration() I'm calling the constructor which will have a null configuration value. Instead I have to use Context, which is passed in the Adapter class.
 
 ### Open-source libraries used
 

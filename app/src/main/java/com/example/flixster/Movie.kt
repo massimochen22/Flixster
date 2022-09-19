@@ -1,21 +1,18 @@
 package com.example.flixster
 
-import android.app.Activity
-import android.content.res.Configuration
-import android.util.Log
-import android.view.Display
-import android.view.WindowManager
+import android.content.Context
 import org.json.JSONArray
 
 
 data class Movie(
     val movieId: Int,
-    private val posterPath: String,
+    val posterPath: String,
+    val backdropPath: String,
     val title: String,
     val overview: String,
 ){
 
-    val posterImageUrl = "https://image.tmdb.org/t/p/w342/$posterPath"
+
 
     companion object{
         fun fromJsonArray(movieJSONArray: JSONArray): List<Movie>{
@@ -26,6 +23,7 @@ data class Movie(
                     Movie(
                         movieJson.getInt("id"),
                         movieJson.getString("poster_path"),
+                        movieJson.getString("backdrop_path"),
                         movieJson.getString("title"),
                         movieJson.getString("overview")
 
