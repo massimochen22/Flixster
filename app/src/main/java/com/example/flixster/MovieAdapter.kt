@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
 const val MOVIE_EXTRA = "MOVIE_EXTRA"
 
@@ -47,7 +49,14 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
             }
             tvTitle.text = movie.title
             tvOverview.text = movie.overview
-            Glide.with(context).load(posterImageUrl).placeholder(R.drawable.placeholder).error(R.drawable.error).into(ivPoster)
+            Glide.with(context)
+                .load(posterImageUrl)
+//                .centerCrop()
+//                .transform(RoundedCornersTransformation(30,10)) // <-- 1st method
+//                .transform(RoundedCorners(30)) //<-- 2nd method
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.error)
+                .into(ivPoster)
             Log.i("orient2", context.resources.configuration.orientation.toString())
 
         }
