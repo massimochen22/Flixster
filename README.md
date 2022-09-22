@@ -32,7 +32,7 @@ I wasn't able to make the corners rounded. After the instructions from codePath 
 
 UI before implementing round corners:
 <img src="screen1.png"><br>
-UI after implementing round corners:
+UI after implementing round corners: <br>
 <img src="screen2.png"><br>
 
 
