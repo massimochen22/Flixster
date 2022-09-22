@@ -15,6 +15,7 @@ import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation
 
 
 const val MOVIE_EXTRA = "MOVIE_EXTRA"
@@ -39,6 +40,7 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
         private val ivPoster = itemView.findViewById<ImageView>(R.id.ivPoster)
         private val tvTitle = itemView.findViewById<TextView>(R.id.tvTitle)
         private val tvOverview = itemView.findViewById<TextView>(R.id.tvOverview)
+        private val playButton = itemView.findViewById<ImageView>(R.id.playButton)
         var posterImageUrl = ""
         fun bind(movie: Movie){
             if (context.resources.configuration.orientation === Configuration.ORIENTATION_LANDSCAPE){
@@ -47,12 +49,20 @@ class MovieAdapter(private val context: Context, private val movies: List<Movie>
             else{
                 posterImageUrl = "https://image.tmdb.org/t/p/w342/${movie.posterPath}"
             }
+
+            if (movie.voteAverage <= 6.5){
+                playButton.visibility = View.INVISIBLE
+            }
+            else{
+                playButton.visibility = View.VISIBLE
+            }
+
             tvTitle.text = movie.title
             tvOverview.text = movie.overview
             Glide.with(context)
                 .load(posterImageUrl)
 //                .centerCrop()
-//                .transform(RoundedCornersTransformation(30,10)) // <-- 1st method
+//                .transform(RoundedCornersTransformation(100,0)) // <-- 1st method
 //                .transform(RoundedCorners(30)) //<-- 2nd method
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.error)

@@ -73,7 +73,7 @@ class DetailActivity : YouTubeBaseActivity() {
                 p2: Boolean
             ) {
                 if (voteAverage <= 6.5) {
-                    player?.cueVideo(youtubeKey);
+                    player?.cueVideo(youtubeKey)
                 }
                 else {
                     player?.loadVideo(youtubeKey)
