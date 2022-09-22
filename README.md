@@ -28,7 +28,13 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### Notes
 
-Describe any challenges encountered while building the app.
+I wasn't able to make the corners rounded. After the instructions from codePath I was able to recreate everything but it would mess up my UI.
+
+UI before implementing round corners:
+<img src="screen1.png"><br>
+UI after implementing round corners:
+<img src="screen2.png"><br>
+
 
 ## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
