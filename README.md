@@ -22,10 +22,10 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="walkthrough3.gif"><br>
 
+gif generated with Kap
 ### Notes
 
 I wasn't able to make the corners rounded. After the instructions from codePath I was able to recreate everything but it would mess up my UI.
@@ -67,6 +67,7 @@ UI after implementing round corners: <br>
 edit: Updated gif:
 <img src="walkthrough2.gif"><br>
 
+gif generated with Kap
 ### Notes
 
 I tried to tackle down the stretch story regarding the landscape view (getting the poster to back_drop path), but I wasn't able to solve the issues. I first tried from Movie.kt, and simply change the path to the back_drop path using if else logic when the device orientation is in landscape, but I noticed it didn't work.
